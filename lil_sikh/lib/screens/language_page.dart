@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lil_sikh/widgets/button_widget.dart';
 
 class LanguagePage extends StatelessWidget {
   const LanguagePage({super.key});
@@ -40,53 +41,19 @@ class LanguagePage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
-              height: 60,
-              width: double.infinity,
-              margin: const EdgeInsets.symmetric(horizontal: 100),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(12.0),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black.withOpacity(0.2),
-                    blurRadius: 15,
-                  ),
-                ],
-              ),
-              child: const Center(
-                child: Text(
-                  'English',
-                  style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.black,
-                  ),
-                ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 30),
+              child: ButtonWidget(
+                onTap: (){},
+                text: 'English',
               ),
             ),
             const SizedBox(height: 30),
-            Container(
-              height: 60,
-              width: double.infinity,
-              margin: const EdgeInsets.symmetric(horizontal: 100),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(12.0),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black.withOpacity(0.2),
-                    blurRadius: 15,
-                  ),
-                ],
-              ),
-              child: const Center(
-                child: Text(
-                  'Spinash',
-                  style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.black,
-                  ),
-                ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 30),
+              child: ButtonWidget(
+                onTap: (){},
+                text: 'Spinash',
               ),
             ),
           ],

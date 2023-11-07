@@ -58,17 +58,21 @@ class _MainPageState extends State<MainPage> {
       body: GridView.builder(
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
+          mainAxisSpacing: 20,
+          childAspectRatio: 0.85,
         ),
         itemCount: 14,
         physics: const BouncingScrollPhysics(),
-        padding: const EdgeInsets.symmetric(vertical: 20),
+        padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 12),
         itemBuilder: (context, index) {
           return GestureDetector(
             onTap: () {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => const DetailPage(),
+                  builder: (context) => DetailPage(
+                    imageIndex: index + 1,
+                  ),
                 ),
               );
             },
